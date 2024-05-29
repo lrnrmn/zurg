@@ -21,9 +21,11 @@ makepkg -si
 ```
 ## Installing Zurg
 1. Clone the zurg repo `git clone https://github.com/debridmediamanager/zurg-testing.git`
-2. Add your token in `config.yml`
-3. `sudo mkdir -p /mnt/zurg`
-4. Run `docker compose up -d`
-5. `time ls -1R /mnt/zurg` You're done! If you do edits on your config.yml just do `docker compose restart zurg`.
+2. `cd zurg-testing`
+3. `sudo nano config.yml`
+4. Replace "your token" with your token from the ReadlDebrid [website](https://real-debrid.com/apitoken)
+5. `sudo mkdir -p /mnt/zurg`
+6. Run `docker compose up -d`
+7. `time ls -1R /mnt/zurg` You're done! If you do edits on your config.yml just do `docker compose restart zurg`.
 
 A webdav server is also exposed to your localhost via port `9999`.
