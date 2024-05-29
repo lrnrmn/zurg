@@ -32,7 +32,7 @@ makepkg -si
 3. `sudo nano config.yml`
 4. Replace "your token" with your token from the ReadlDebrid [website](https://real-debrid.com/apitoken)
 5. `sudo mkdir -p /mnt/zurg`
-6. Run `docker compose up -d`
+6. Run `sudo docker compose up -d`
 7. `time ls -1R /mnt/zurg` You're done! If you do edits on your config.yml just do `docker compose restart zurg`.
 
 A webdav server is also exposed to your localhost via port `9999`.
