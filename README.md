@@ -6,6 +6,13 @@ zurg uses docker in order to run.
 ```bash
 sudo pacman -S docker docker-compose
 ```
+Enable the `docker` service
+```bash
+systemctl start docker.service
+```
+```bash
+systemctl enable docker.service
+```
 ### Install an AUR helper
 If you dont already have one, install an AUR Helper.
  * yay:
