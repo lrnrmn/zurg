@@ -6,7 +6,7 @@ zurg uses docker in order to run.
 ```bash
 sudo pacman -S docker docker-compose
 ```
-Enable the `docker` service
+Enable the `docker` service.
 ```bash
 systemctl start docker.service
 ```
@@ -36,3 +36,23 @@ makepkg -si
 7. `time ls -1R /mnt/zurg` You're done! If you do edits on your config.yml just do `docker compose restart zurg`.
 
 A webdav server is also exposed to your localhost via port `9999`.
+## Installing Plex
+Plex is not availible in the arch repo's. Get it from the AUR:
+```bash
+yay -S plex-media-server
+```
+Enable the `plexmediaserver` service.
+```bash
+systemctl start plexmediaserver.service
+```
+```bash
+systemctl enable plexmediaserver.service
+```
+## Configure Plex
+To begin configuring the Plex Media Server, browse to http://localhost:32400/web/.
+
+Follow the onscreen instructionsmmm, until you get to the "Media Library" part.
+
+When you add libraries, choose zurg and then either movies or TV shows.
+
+Also, in plex settings, under online media sources, disable the first 3 under general.
